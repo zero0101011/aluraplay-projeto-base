@@ -1,0 +1,53 @@
+
+ /*estilização do Cabeçalho*/
+.cabecalho__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   position: fixed;
+}
+
+/* tornando a barra de pesquisa invisível*/
+.cabecalho__pesquisar__item{
+    display: none;
+}
+
+
+.menu__container {
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    height: 75px;
+}
+
+
+/*estiliação roda pé*/
+.rodape__container{
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/* tornando a barra de pesquisa se tiver no mínimo 843px de largura*/
+@media (min-width: 843px) {
+    .cabecalho__pesquisar__item {
+        display: block;
+       
+    }
+
+    
+    .rodape__container{
+        justify-content: space-between;
+    }
+}
+
+
+
+
+.superior__secao__container{
+    display: flex;
+   align-items: center;
+   overflow: scroll;
+   white-space: nowrap;
+   gap: 15px;
+}
+
