@@ -51,7 +51,6 @@
 }
 
 
-
 /*estilização roda pé*/
 .rodape__container{
     display: flex;
@@ -68,6 +67,22 @@
     /* garantindo que o rodape tenha um espaçamento entre os itens na versão de tablet*/
     .rodape__container{
         justify-content: space-between;
+    }
+
+    .menu__container{
+    position: fixed;
+    height: 88.6%;
+    width: 75px;
+       
+    }
+
+    .menu__lista{
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 6%;
+        
+        
+       
     }
 }
 
