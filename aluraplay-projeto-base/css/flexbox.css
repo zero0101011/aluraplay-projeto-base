@@ -13,28 +13,59 @@
 }
 
 
+/* colocando o menu próximo ao footer com o bottom e fixando a posição dele embaixo, e garantindo que ele use 100% do conteiner*/
 .menu__container {
     position: fixed;
     bottom: 0%;
     width: 100%;
-    height: 75px;
+    height: 74px;
 }
 
 
-/*estiliação roda pé*/
+/* adc. flex nos itens e garantindo espaçamento entre eles e que use 100% do container*/
+.menu__lista {
+   display: flex;
+   justify-content: space-around;
+   height: 100%;
+   
+}
+
+/* garantindo que os nomes fiquem embaixo dos icones e gap entre eles*/
+.menu__itens {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* garantindo que todos as li estejam alinhadas no centro*/
+.menu__lista li {
+    align-self: center;
+}
+
+/* isso é o :nth-child com ele podemos selecionar os elementos e colocar um atributo neles de forma rápida e simples*/
+.menu__lista:nth-child(2),
+.menu__lista:nth-child(3),
+.menu__lista:nth-child(4)
+{
+    display: none;
+}
+
+
+
+/*estilização roda pé*/
 .rodape__container{
     display: flex;
     flex-flow: column wrap;
 }
 
-/* tornando a barra de pesquisa se tiver no mínimo 843px de largura*/
+/* tornando a barra de pesquisa visível se tiver no mínimo 843px de largura*/
 @media (min-width: 843px) {
     .cabecalho__pesquisar__item {
         display: block;
        
     }
 
-    
+    /* garantindo que o rodape tenha um espaçamento entre os itens na versão de tablet*/
     .rodape__container{
         justify-content: space-between;
     }
@@ -42,7 +73,7 @@
 
 
 
-
+/* essa é a seção de temas  abaixo da barra de pesquisa, adicionamos scroll para ter barra para arrastar os itens, e o white space para formatar os textos para que não se quebrem*/
 .superior__secao__container{
     display: flex;
    align-items: center;
